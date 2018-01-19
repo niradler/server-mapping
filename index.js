@@ -3,7 +3,7 @@ function Server(config) {
     this.url = config.url;
     this.actions = config.actions;
     for (const key in  this.actions) {
-        Server.prototype[key] = function(params) {
+        Server.prototype[key] = function(param,data) {
             var host = this.url.concat(this.actions[key].path);
             var find_var = host.indexOf(':');
             if (find_var>-1 && arguments.length>0) {
@@ -14,12 +14,19 @@ function Server(config) {
                
                 }
             }
-            return axios({
+            var options ={
                 method:  this.actions[key].method,
                 url: host,
-              });
+            }
+            if(['post','put'].indexOf(this.actions[key].method.toLowerCase())>-1)
+            options.data=data?data:{};
+            return axios(options);
         }
     }
    
 }
-exports = Server;
+if (typeof exports === 'undefined') {
+    window.Server=Server;
+} else {
+    module.exports= Server;
+}

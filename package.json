@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Nir Adler",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.17.1"
   }
