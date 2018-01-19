@@ -6,7 +6,7 @@ mapping server route by config object, make client server communication easily m
 **Download using npm**
 - npm install server-mapping
 
-**Create a config file to description server interaction**
+**Create a config file to describe server interaction**
 - Example of how a config file should look like. [link](https://github.com/niradler/server-mapping/blob/master/config.js)
 
 **Include scripts**
@@ -24,4 +24,4 @@ mapping server route by config object, make client server communication easily m
 
 ## Demo
 **open developer console F12**
- [link](https://niradler.github.io/server-mapping/)
+ [link](https://niradler.github.io/server-mapping/main.html)
