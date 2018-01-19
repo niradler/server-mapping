@@ -11,5 +11,13 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niradler/server-mapping.git"
+  },
+  "homepage": "https://niradler.github.io/server-mapping",
+  "bugs": {
+    "url": "https://github.com/niradler/server-mapping/issues"
   }
 }
