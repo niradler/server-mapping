@@ -1,6 +1,6 @@
 {
   "name": "server-mapping",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mapping server route by config object",
   "main": "main.js",
   "scripts": {

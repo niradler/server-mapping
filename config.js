@@ -1,5 +1,4 @@
-function config() {
-    return {
+var config = {
         url: 'https://book-store-adonis.herokuapp.com/api',
         actions: {
             getAll:{
@@ -28,5 +27,4 @@ function config() {
             }
         }
     }
-}
-exports=config
+
