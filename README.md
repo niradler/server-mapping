@@ -11,10 +11,11 @@ mapping server route by config object, make client server communication easily m
 
 **Include scripts**
 ```markdown
+ <!-- include server-mapping core code and dependency -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
   <script src="node_modules/server-mapping/index.js"></script>  
 
-  <p></p>
+ <!-- initialize the server -->
   <script src="config.js"></script>  
   <script>
   var server =  new Server(config)
