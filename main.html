@@ -10,6 +10,19 @@
    
     <div id="main"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+        <script>
+        axios.interceptors.request.use(function (config) {
+    // Do something before request is sent
+    //you can use that method to add auth to header
+    var headers = config.headers;
+    headers.Authorization = 'bearer';
+    console.log(config)
+    return config;
+  }, function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+  });
+        </script>
   <script src="index.js"></script>  
   <script src="config.js"></script>  
   <script src="main.js"></script>  
