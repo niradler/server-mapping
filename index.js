@@ -10,16 +10,14 @@ if (typeof require === 'undefined') {
 function Server(config) {
     this.url = config.url;
     this.actions = config.actions;
-    for (const key in  this.actions) {
+    for (var key in  this.actions) {
         Server.prototype[key] = function(param,data) {
             var host = this.url.concat(this.actions[key].path);
             var find_var = host.indexOf(':');
             if (find_var>-1 && arguments.length>0) {
                 for (var i = 0; i < arguments.length; i++) {
                     var name=Object.getOwnPropertyNames(arguments[i])[0],value=arguments[i][name];
-                   // console.log(host,':' + name,value)
                     host = host.replace(':' + name,value)
-               
                 }
             }
             var options ={
